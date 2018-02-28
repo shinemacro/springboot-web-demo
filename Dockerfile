@@ -1,6 +1,5 @@
-FROM frolvlad/alpine-oraclejdk8:slim
-VOLUME /tmp
-ADD lidong-spring-boot-demo-1.0-SNAPSHOT.jar app.jar
-RUN sh -c 'touch /app.jar'
-ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+FROM ubuntu-jdk8
+MAINTAINER zhaoyaohong "zhaoyaohong@aliyun.com"
+ADD /usr/project/springboot-web-demo-0.0.1-SNAPSHOT.jar /usr/project/springboot-web-demo-0.0.1-SNAPSHOT.jar
+EXPOSE 39001
+ENTRYPOINT ["java" ,"-jar","/usr/project/springboot-web-demo-0.0.1-SNAPSHOT.jar"]
