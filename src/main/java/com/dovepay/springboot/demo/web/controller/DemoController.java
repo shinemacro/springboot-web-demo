@@ -38,7 +38,7 @@ public class DemoController {
         demo.put("id", 0);
         demo.put("name", "demo");
         demo.put("description", "springboot demo");
-        demo.put("version", "0.0.1");
+        demo.put("version", "0.0.2");
         demo.put("createTime", new Date());
         return demo;
     }
