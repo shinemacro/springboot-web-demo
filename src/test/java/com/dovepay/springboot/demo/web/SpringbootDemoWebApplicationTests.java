@@ -11,6 +11,7 @@ public class SpringbootDemoWebApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("SpringBootApplication init successed.");  
 	}
 
 }
