@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driverClassName: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@10.1.28.174:1521:epaydb
-    username: epaysch
-    password: epaysch
+    driverClassName: ${driverClassName}
+    url: ${databaseuUrl}
+    username: ${username}
+    password: ${password}
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -33,5 +33,5 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://epaysch:epaysch@localhost:27017/epaydb
+      uri: ${mongodbUri}
       
